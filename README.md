@@ -187,6 +187,12 @@ To flash the firmware using the Arduino IDE, please make sure to follow these st
   - The **ESP32 by Espressif Boards** library is installed.
   - The board settings in Arduino IDE match the requirements (end device mode, correct partition, USB CDC enabled).
 
+## Library Patches
+
+ - The OneWire library (version 2.3.8) included in this project has been patched to support the ESP32-C6 architecture.
+ - Modifications in OneWire_direct_gpio.h update register accesses (using .val) for functions such as directRead, directWriteLow, directWriteHigh, directModeInput, and directModeOutput.
+ - This fix addresses compilation errors like "no match for 'operator>>'" and similar errors in the ESP32-C6 environment.
+
 ---
 
 ## Contributing

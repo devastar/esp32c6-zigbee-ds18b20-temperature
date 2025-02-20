@@ -92,7 +92,7 @@ void setup() {
   // if min = 1 and max = 0, reporting is sent only when temperature changes by delta
   // if min = 0 and max = 10, reporting is sent every 10 seconds or temperature changes by delta
   // if min = 0, max = 10 and delta = 0, reporting is sent every 10 seconds regardless of temperature change
-  zbTempSensor.setReporting(1, 0, 1);
+  zbTempSensor.setReporting(1, 60, 2);
 }
 
 void loop() {
